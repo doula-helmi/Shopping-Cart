@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="/img/logo.png" alt="" />
+        </div>
+        <div class="navmemu">
+          <form>
+            <input
+              id="Input"
+              type="text"
+              onkeyup="filtert()"
+              placeholder="Search for items.."
+              name="search"
+            />
+          </form>
+          <img src="/img/panier.png" alt="" /><span id="cart-count">4</span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="items inner">
+        <h1>Shopping Bag</h1>
+        <table id="table">
+          <tr>
+            <th></th>
+            <th>ITEM</th>
+            <th>IMAGE</th>
+            <th>PRICE</th>
+            <th>QUANTITY</th>
+            <th>TOTAL</th>
+            <th>REMOVE</th>
+          </tr>
+          <tr>
+            <td>
+              <svg viewBox="0 0 22 24">
+                <g>
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M14.75 1A5.24 5.24 0 0 0 10 4 5.24 5.24 0 0 0 0 6.25C0 11.75 10 19 10 19s10-7.25 10-12.75A5.25 5.25 0 0 0 14.75 1z"
+                  ></path>
+                </g>
+              </svg>
+            </td>
+            <td>Samsung Galaxy A23</td>
+            <td><img src="/img/smartphone-samsung-galaxy-a23-4-go-64-go-blanc.jpg" alt="" /></td>
+            <td class="itemprice"><span>975</span> DT</td>
+            <td class="quantity">
+              <button class="btn down">-</button><span class="itemcount">1</span
+              ><button class="btn up">+</button>
+            </td>
+            <td class="totalitemprice"><span>975</span> DT</td>
+            <td>
+              <svg
+                class="remove"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 109.484 122.88"
+              >
+                <g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.347,9.633h38.297V3.76c0-2.068,1.689-3.76,3.76-3.76h21.144 c2.07,0,3.76,1.691,3.76,3.76v5.874h37.83c1.293,0,2.347,1.057,2.347,2.349v11.514H0V11.982C0,10.69,1.055,9.633,2.347,9.633 L2.347,9.633z M8.69,29.605h92.921c1.937,0,3.696,1.599,3.521,3.524l-7.864,86.229c-0.174,1.926-1.59,3.521-3.523,3.521h-77.3 c-1.934,0-3.352-1.592-3.524-3.521L5.166,33.129C4.994,31.197,6.751,29.605,8.69,29.605L8.69,29.605z M69.077,42.998h9.866v65.314 h-9.866V42.998L69.077,42.998z M30.072,42.998h9.867v65.314h-9.867V42.998L30.072,42.998z M49.572,42.998h9.869v65.314h-9.869 V42.998L49.572,42.998z"
+                  />
+                </g>
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <svg viewBox="0 0 22 24">
+                <g>
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M14.75 1A5.24 5.24 0 0 0 10 4 5.24 5.24 0 0 0 0 6.25C0 11.75 10 19 10 19s10-7.25 10-12.75A5.25 5.25 0 0 0 14.75 1z"
+                  ></path>
+                </g>
+              </svg>
+            </td>
+            <td>Huawei Nova Y60</td>
+            <td><img src="/img/smartphone-huawei-nova-y60.jpg" alt="" /></td>
+            <td class="itemprice"><span>699</span> DT</td>
+            <td class="quantity">
+              <button class="btn down">-</button><span class="itemcount">1</span
+              ><button class="btn up">+</button>
+            </td>
+            <td class="totalitemprice"><span>699</span> DT</td>
+            <td>
+              <svg
+                class="remove"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 109.484 122.88"
+              >
+                <g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.347,9.633h38.297V3.76c0-2.068,1.689-3.76,3.76-3.76h21.144 c2.07,0,3.76,1.691,3.76,3.76v5.874h37.83c1.293,0,2.347,1.057,2.347,2.349v11.514H0V11.982C0,10.69,1.055,9.633,2.347,9.633 L2.347,9.633z M8.69,29.605h92.921c1.937,0,3.696,1.599,3.521,3.524l-7.864,86.229c-0.174,1.926-1.59,3.521-3.523,3.521h-77.3 c-1.934,0-3.352-1.592-3.524-3.521L5.166,33.129C4.994,31.197,6.751,29.605,8.69,29.605L8.69,29.605z M69.077,42.998h9.866v65.314 h-9.866V42.998L69.077,42.998z M30.072,42.998h9.867v65.314h-9.867V42.998L30.072,42.998z M49.572,42.998h9.869v65.314h-9.869 V42.998L49.572,42.998z"
+                  />
+                </g>
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <svg viewBox="0 0 24 24">
+                <g>
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M14.75 1A5.24 5.24 0 0 0 10 4 5.24 5.24 0 0 0 0 6.25C0 11.75 10 19 10 19s10-7.25 10-12.75A5.25 5.25 0 0 0 14.75 1z"
+                  ></path>
+                </g>
+              </svg>
+            </td>
+            <td>HUAWEI Y9A</td>
+            <td>
+              <img
+                src="/img/smartphone-huawei-y9a-4g-double-sim-silver.jpg"
+                alt=""
+              />
+            </td>
+            <td class="itemprice"><span>1069</span> DT</td>
+            <td class="quantity">
+              <button class="btn down">-</button><span class="itemcount">1</span
+              ><button class="btn up">+</button>
+            </td>
+            <td class="totalitemprice"><span>1069</span> DT</td>
+            <td>
+              <svg
+                class="remove"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 109.484 122.88"
+              >
+                <g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.347,9.633h38.297V3.76c0-2.068,1.689-3.76,3.76-3.76h21.144 c2.07,0,3.76,1.691,3.76,3.76v5.874h37.83c1.293,0,2.347,1.057,2.347,2.349v11.514H0V11.982C0,10.69,1.055,9.633,2.347,9.633 L2.347,9.633z M8.69,29.605h92.921c1.937,0,3.696,1.599,3.521,3.524l-7.864,86.229c-0.174,1.926-1.59,3.521-3.523,3.521h-77.3 c-1.934,0-3.352-1.592-3.524-3.521L5.166,33.129C4.994,31.197,6.751,29.605,8.69,29.605L8.69,29.605z M69.077,42.998h9.866v65.314 h-9.866V42.998L69.077,42.998z M30.072,42.998h9.867v65.314h-9.867V42.998L30.072,42.998z M49.572,42.998h9.869v65.314h-9.869 V42.998L49.572,42.998z"
+                  />
+                </g>
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <svg viewBox="0 0 24 24">
+                <g>
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M14.75 1A5.24 5.24 0 0 0 10 4 5.24 5.24 0 0 0 0 6.25C0 11.75 10 19 10 19s10-7.25 10-12.75A5.25 5.25 0 0 0 14.75 1z"
+                  ></path>
+                </g>
+              </svg>
+            </td>
+            <td>NOKIA C1</td>
+            <td>
+              <img
+                src="/img/smartphone-nokia-c1-2eme-edition-3g-1-go-16-go-double-sim-bleu.jpg"
+                alt=""
+              />
+            </td>
+            <td class="itemprice"><span>259</span> DT</td>
+            <td class="quantity">
+              <button class="btn down">-</button><span class="itemcount">1</span
+              ><button class="btn up">+</button>
+            </td>
+            <td class="totalitemprice"><span>259</span> DT</td>
+            <td>
+              <svg
+                class="remove"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 109.484 122.88"
+              >
+                <g>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.347,9.633h38.297V3.76c0-2.068,1.689-3.76,3.76-3.76h21.144 c2.07,0,3.76,1.691,3.76,3.76v5.874h37.83c1.293,0,2.347,1.057,2.347,2.349v11.514H0V11.982C0,10.69,1.055,9.633,2.347,9.633 L2.347,9.633z M8.69,29.605h92.921c1.937,0,3.696,1.599,3.521,3.524l-7.864,86.229c-0.174,1.926-1.59,3.521-3.523,3.521h-77.3 c-1.934,0-3.352-1.592-3.524-3.521L5.166,33.129C4.994,31.197,6.751,29.605,8.69,29.605L8.69,29.605z M69.077,42.998h9.866v65.314 h-9.866V42.998L69.077,42.998z M30.072,42.998h9.867v65.314h-9.867V42.998L30.072,42.998z M49.572,42.998h9.869v65.314h-9.869 V42.998L49.572,42.998z"
+                  />
+                </g>
+              </svg>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section class="checkout inner">
+        <div class="promotion">
+          <div>
+            <form action="javascript:void(0);">
+              <input id="code" placeholder="50% discount: GOMYCODE" type="text" value="" />
+              <button id="apcode" class="btn">Apply code</button>
+            </form>
+          </div>
+        </div>
+        <div class="Proceed">
+          <div>
+            <span>Sub Total : </span>
+            <span id="total">3002</span>
+            <span>DT</span>
+          </div>
+          <div>
+            <button class="btn">Proceed to Checkout</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/main.js"></script>
+  </body>
+</html>

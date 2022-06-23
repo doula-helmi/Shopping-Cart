@@ -1,0 +1,169 @@
+body {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+main{
+  padding-top: 5rem;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  line-height: 1rem;
+  line-height: 2rem;
+  background: #efefef;
+}
+nav div {
+  padding-top: 1rem;
+}
+
+.logo {
+  padding-left: 10rem;
+}
+.logo img {
+  width: 12rem;
+}
+
+.navmemu {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.navmemu img:hover {
+  background-color: #4caf50;
+  border: 8px solid #4caf50;
+  border-radius: 0.4rem;
+  height: 1.5rem;
+}
+.navmemu img {
+  border: 8px solid #efefef;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+table img {
+  padding: 5px 0 5px 0;
+  width: 5rem;
+  cursor: pointer;
+}
+table .remove img {
+  width: 5%;
+}
+
+tr {
+  height: 4rem;
+  border-bottom: 4px solid black;
+}
+
+td,
+th {
+  text-align: start;
+}
+
+#cart-count {
+  border-radius: 50%;
+  border: 7px solid #4caf50;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 14px;
+  right: 24px;
+  top: -9px;
+  position: relative;
+  background: #4caf50;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+}
+.navmemu img:hover ~ #cart-count {
+  color: white;
+  background-color: rgb(102, 100, 100);
+  border: 7px solid rgb(102, 100, 100);
+}
+
+td,
+th {
+  border-bottom: 1px solid #ddd;
+}
+
+td:nth-child(2){
+  font-weight: bold;
+}
+
+#table {
+  width: 100%;
+}
+
+#table svg {
+  width: 2rem;
+  fill: #b1b0a5;
+  cursor: pointer;
+}
+
+#table svg:hover {
+  fill: #f80029 !important;
+}
+
+
+#table .active {
+  fill: #f80029;
+}
+
+#Input {
+  font-size: 14px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.btn:hover {
+  background-color: #ffea28;
+  color: black;
+}
+.checkout {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Proceed {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#code {
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px 36px 8px 8px;
+  border: 1px solid #ddd;
+  width: 11rem;
+}
+.itemcount{
+  padding: 1rem;
+}
